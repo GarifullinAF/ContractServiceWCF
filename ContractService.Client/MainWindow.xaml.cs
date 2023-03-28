@@ -1,4 +1,4 @@
-﻿using ContractService.Model;
+﻿using ContractServiceWCF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ServiceModel;
-using ContractService.Model.Interfaces;
 using System.Net;
 
 namespace ContractService.Client
@@ -34,6 +33,7 @@ namespace ContractService.Client
             using (var channelFactory = new ChannelFactory<IContractService>(binding, endpointAddress))
             {
                 IContractService contractClient = null;
+
                 try
                 {
                     contractClient = channelFactory.CreateChannel();                    

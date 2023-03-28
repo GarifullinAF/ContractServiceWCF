@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using ContractService.Model.Interfaces;
-using ContractService.Model;
+using ContractServiceWCF;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;

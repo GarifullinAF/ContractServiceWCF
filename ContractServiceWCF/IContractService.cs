@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 using System.Diagnostics.Contracts;
 
-namespace ContractService.Model.Interfaces
+namespace ContractServiceWCF
 {
     [ServiceContract]
     public interface IContractService
