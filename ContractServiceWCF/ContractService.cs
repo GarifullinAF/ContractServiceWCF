@@ -17,7 +17,7 @@ namespace ContractServiceWCF
             DataSet ObjDataset = new DataSet();
             SqlDataAdapter objAdapater = new SqlDataAdapter();
             SqlCommand objCommand = new SqlCommand("Select * from Contract");            
-            objConnection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\adm_GarifullinAF\\source\\repos\\ContractServiceWCF\\ContractServiceWCF\\Database1.mdf;Integrated Security=True;Connect Timeout=30";
+            objConnection.ConnectionString = ConfigurationManager.ConnectionStrings[0].ToString();
             objCommand.Connection = objConnection;
             objAdapater.SelectCommand = objCommand;
             objAdapater.Fill(ObjDataset);
